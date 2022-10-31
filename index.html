@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Movies</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+        <!-- LINKS STYLE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="shortcut icon" href="./IMG/jslogo.png" type="image/x-icon">
+
+
+</head>
+<body>
+
+    <!-- NAVBAR CONTENT -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./IMG/jslogo.png" alt="logo">
+            
+          </a><h3 id="title">JS <span id="purple">Corn</span></h3>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Movies</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Drama</a></li>
+                    <li><a class="dropdown-item" href="#">Comedy</a></li>
+                    <li><a class="dropdown-item" href="#">Adventurie</a></li>
+                    <li><a class="dropdown-item" href="#">Thriller</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        
+      </nav>
+
+
+      <!-- CONTENT -->
+
+      <div class="container-movies-set">
+
+      <div class="search-container">
+      <div class="search-element">
+      <form class="formcontrol" role="search">
+        <input id="movie-search-box" 
+        autocomplete="off" 
+        class="form-control" 
+        type="text" 
+        placeholder="Search Movie" 
+        aria-label="Search"
+        onkeyup="findMovies()"
+        >
+      </form>
+
+      <div class="search-list" id="search-list">
+        <!-- <div class="search-list-item">
+            <div class="search-item-thumbnail">
+                <img src="./IMG/thumb.avg.jpg" alt="thumb">
+            </div>
+            <div class="search-item-info">
+                <h3>Avenders Filme legal</h3>
+                <p>2008</p>
+            </div>
+        </div> -->
+      </div>
+      <div class="down-imput">
+        <div class="container">
+            <div class="result-container">
+                <div class="result-grid" id="result-grid">
+                    <!-- <div class="movie-poster">
+                        <img src="./IMG/thumb.avg.jpg" alt="movie">
+                    </div>
+                    <div class="movie-info">
+                        <h3 class="movie-title">
+                            Avengers
+                        </h3>
+                        <ul class="movie-misc-info">
+                            <li class="year">Year: 2017</li>
+                            <li class="rated">Ratings: PG-13</li>
+                            <li class="released">Released: 05</li>
+                        </ul>
+                        <p class="genre"><b>Genre:</b> Action, Adventure, Comedy</p>
+                        <p class="writer"><b>Writer:</b> James, Gunn, Don sla</p>
+                        <p class="actors"><b>Actorns</b>Zoe, Homem aranha, e mais alguem</p>
+                        <p class="plot"><b>Plot:</b>Tenho que fingir q sei</p>
+                        <p class="language"><b>Language</b>Portugues</p>
+                        <p class="awards"><b><i class="fas fa-award"></i></b></p>
+                    </div> -->
+                 </div>
+             </div>
+          </div>
+        </div>
+
+    </div>
+
+    </div>
+    
+</div>
+
+
+<!-- TITLE -->
+
+<div class="container-movies">
+  <h2 class="title-container"> MOVIES </h2>
+  <div class="movies">
+
+
+  </div>
+</div>
+
+
+
+    <!-- SCRIPTS -->
+    <script src="./JS/main.js" defer></script>
+    <script src="./JS/index.js" defer></script>
+</body>
+</html>

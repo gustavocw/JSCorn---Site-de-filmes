@@ -1,0 +1,52 @@
+function displayMovieList(movies) {
+    searchList.innerHTML = "";
+    for(let idx = 0; idx < movies.lenght; idx++) {
+        let movieListItem = document.createElement('div');
+        movieListItem.dataset.id = movies[idx].imdbID;
+        movieListItem.classList.add('search-list-item');
+        
+        if(movies[idx].poster != "N/A")
+        moviePoster = "image_not_found.png"
+
+        movieListItem.innerHTML = `<div class="search-list-item">
+        <div class="search-item-thumbnail">
+            <img src="${moviePoster}" alt="thumb">
+        </div>
+        <div class="search-item-info">
+            <h3>${movies[idx].Title}</h3>
+            <p>${movies[idx].Year}</p>
+        </div>
+    </div
+    `;
+    searchList.appendChild(movieListItem);
+    }
+
+}
+
+
+
+
+
+displayCard(details)
+
+function displayCard(details){
+    cardMovie.innerHTML = `
+    <div class="card">
+  <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+  <img src="${details.Poster}" />
+</a>
+  <div class="card-content">
+      <h4 class="card-title">
+          <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+          ${details.Title}
+        </a>
+      </h4>
+      <p class="">
+      ${details.Year} <br>
+      ${details.Writer}<br>
+      ${details.Released}
+      </p>
+  </div>
+</div>
+    `;
+}
